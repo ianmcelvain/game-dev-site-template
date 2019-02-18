@@ -1,0 +1,10 @@
+#section-hero {
+    background: url(../img/adam2.png) 50% 0 no-repeat;
+    background-size: cover;
+    height: 95vh;
+}
+
+#section-about {
+    height: 35vh;
+    background: white;
+}
