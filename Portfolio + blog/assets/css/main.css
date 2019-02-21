@@ -1,10 +1,203 @@
-#section-hero {
-    background: url(../img/adam2.png) 50% 0 no-repeat;
-    background-size: cover;
-    height: 95vh;
+html {
+  background-color: #1c1c1c;
 }
 
-#section-about {
-    height: 35vh;
-    background: white;
+html h1 {
+  font-size: 5rem;
 }
+
+html h2 {
+  font-size: 3rem;
+}
+
+html h3 {
+  font-size: 2rem;
+}
+
+html h4 {
+  font-size: 1.5rem;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  color: #d3dbe9;
+  background-color: #1c1c1c;
+  width: 100%;
+  height: 100%;
+}
+
+body header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 500;
+}
+
+body .is-uppercase {
+  text-transform: uppercase !important;
+}
+
+body .is-spaced {
+  letter-spacing: 4px;
+}
+
+body .is-bold {
+  font-weight: 700 !important;
+}
+
+.navbar {
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  background-color: rgba(28, 28, 28, 0.3) !important;
+  padding: 1.5rem 0 1.5rem 0;
+}
+
+.navbar.scrolled {
+  background-color: #1c1c1c !important;
+  padding: 0.5rem 1rem;
+}
+
+.navbar.scrolled .container .navbar-brand img {
+  width: 38.5px;
+  height: 35.6px;
+}
+
+.navbar .container .navbar-brand img {
+  width: 77px;
+  height: 71.2px;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+.navbar .container .navbar-collapse .navbar-nav .nav-item {
+  padding: .5rem .75rem;
+}
+
+.navbar .container .navbar-collapse .navbar-nav .nav-item .nav-link {
+  color: #fff;
+}
+
+.content .hero {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+}
+
+.content .hero.header .title {
+  color: white;
+  font-size: 9rem;
+  font-weight: 900;
+  line-height: 8.5rem;
+  word-spacing: 100vw;
+  text-shadow: 0 0 2px #000000;
+}
+
+.content .hero.is-light {
+  background-color: white;
+  color: black;
+}
+
+.content .hero.is-light .title {
+  color: black;
+}
+
+.content .hero.is-fullheight {
+  min-height: 100vh;
+}
+
+.content .hero.is-fullheight .hero-body {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.content .hero.is-large .hero-body {
+  padding-top: 14rem;
+  padding-bottom: 14rem;
+}
+
+.content .hero.is-medium .hero-body {
+  padding-top: 9rem;
+  padding-bottom: 9rem;
+}
+
+.content .hero.header {
+  background: url(../img/adam4.png) 50% 0 no-repeat fixed;
+  background-size: cover;
+}
+
+.content .hero .hero-body {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+
+.content .hero .hero-body .section-title {
+  text-align: center;
+  margin-bottom: 7rem;
+}
+
+.content .title {
+  color: white;
+  font-weight: 900;
+}
+
+.content .title .page-title {
+  margin-bottom: 3rem;
+}
+
+.content .subtitle {
+  margin-bottom: 1.5rem;
+  line-height: 1.25;
+}
+
+.content .subtitle.page-title {
+  color: #e52628;
+  font-size: .74rem;
+  font-weight: 900;
+  letter-spacing: 4px;
+}
+
+.content .social-badge-list {
+  list-style-type: none;
+  position: absolute;
+  bottom: 0;
+  padding: 0;
+  margin: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background: rgba(0, 0, 0, 0.8);
+}
+
+.content .social-badge-list .social-badge {
+  font-size: 2rem;
+  float: left;
+  margin: 0 2rem 0 2rem;
+}
+
+.content .social-badge-list .social-badge a {
+  color: #d3dbe9;
+}
+
+.content .social-badge-list .social-badge.badge-github a:hover {
+  color: #c9510c;
+}
+
+.content .social-badge-list .social-badge.badge-twitter a:hover {
+  color: #38A1F3;
+}
+
+.content .social-badge-list .social-badge.badge-discord a:hover {
+  color: #7289da;
+}
+
+.content .social-badge-list .social-badge.badge-mail a:hover {
+  color: #57C470;
+}
+/*# sourceMappingURL=main.css.map */

@@ -1,0 +1,239 @@
+$colors: (
+    bg-light: white,
+    bg-dark: #1c1c1c,
+    text-light: #d3dbe9,
+    text-dark: black,
+    title-light: white,
+    title-dark: black,
+    subtitle: #e52628
+);
+
+$backgrounds: (
+    hero-header: url(../img/adam4.png) 50% 0 no-repeat fixed
+);
+
+$section-title-margin: 7rem;
+
+@function color($color-name) {
+    @return map-get($colors, $color-name);
+}
+
+@function image($image-name) {
+    @return map-get($backgrounds, $image-name);
+}
+
+html {
+    background-color: color(bg-dark);
+
+    h1 {
+        font-size: 5rem;
+    }
+
+    h2 {
+        font-size: 3rem;
+    }
+
+    h3 {
+        font-size: 2rem;
+    }
+
+    h4 {
+        font-size: 1.5rem;
+    }
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    color: color(text-light);
+    background-color: color(bg-dark);
+    width: 100%;
+    height: 100%;
+
+    header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 500;
+    }
+
+    .is-uppercase {
+        text-transform: uppercase !important;
+    }
+
+    .is-spaced {
+        letter-spacing: 4px;
+    }
+
+    .is-bold {
+        font-weight: 700 !important;
+    }
+}
+
+.navbar {
+    transition: all 0.5s ease;
+    background-color: rgba(28,28,28,0.3) !important;
+    padding: 1.5rem 0 1.5rem 0;
+
+    &.scrolled {
+        background-color: color(bg-dark) !important;
+        padding: 0.5rem 1rem;;
+
+        .container {
+            .navbar-brand {
+                img {
+                    width: 38.5px;
+                    height: 35.6px;
+                }
+            }
+        }
+    }
+
+    .container {
+        .navbar-brand {
+            img {
+                width: 77px;
+                height: 71.2px;
+                transition: all 0.5s ease;
+            }
+        }
+
+        .navbar-collapse {
+
+            .navbar-nav {
+
+                .nav-item {
+                    padding: .5rem .75rem;
+
+                    .nav-link {
+                        color: #fff;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.content {
+
+    .hero {
+        display: flex;
+        width: 100%;
+
+        &.header {
+
+            .title {
+                color: white;
+                font-size: 9rem;
+                font-weight: 900;
+                line-height: 8.5rem;
+                word-spacing: 100vw;
+                text-shadow: 0 0 2px #000000;
+            }
+        }
+
+        &.is-light {
+            background-color: color(bg-light);
+            color: color(text-dark);
+
+            .title {
+                color: color(text-dark);
+            }
+        }
+        
+        &.is-fullheight {
+            min-height: 100vh;
+
+            .hero-body {
+                align-items: center;
+                display: flex;
+            }
+        }
+
+        &.is-large .hero-body{
+            padding-top: 14rem;
+            padding-bottom: 14rem;
+        }
+
+        &.is-medium .hero-body {
+            padding-top: 9rem;
+            padding-bottom: 9rem;
+        }
+
+        &.header {
+            background: image(hero-header);
+            background-size: cover;
+        }
+
+        .hero-body {
+            flex-grow: 1;
+
+            .section-title {
+                text-align: center;
+                margin-bottom: $section-title-margin;
+            }
+        }
+    }
+
+    .title {
+        color: color(title-light);
+        font-weight: 900;
+
+        .page-title {
+            margin-bottom: 3rem;
+        }
+    }
+
+    .subtitle {
+        margin-bottom: 1.5rem;
+        line-height: 1.25;
+
+        &.page-title {
+            color: color(subtitle);
+            font-size: .74rem;
+            font-weight: 900;
+            letter-spacing: 4px;
+        }
+    }
+
+    .social-badge-list {
+        list-style-type: none;
+        position: absolute;
+        bottom: 0;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        background: rgba(0,0,0,0.8);
+
+        .social-badge {
+            font-size: 2rem;
+            float: left;
+            margin: 0 2rem 0 2rem;
+            
+            a {
+                color: color(text-light);
+            }
+            
+            &.badge-github a {   
+                &:hover {
+                    color: #c9510c;
+                }
+            }
+            &.badge-twitter a {   
+                &:hover {
+                    color: #38A1F3;
+                }
+            }
+            &.badge-discord a {   
+                &:hover {
+                    color: #7289da;
+                }
+            }
+            &.badge-mail a {   
+                &:hover {
+                    color: #57C470;
+                }
+            }
+        }
+    }
+}
