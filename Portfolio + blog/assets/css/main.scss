@@ -12,7 +12,14 @@ $backgrounds: (
     hero-header: url(../img/adam4.png) 50% 0 no-repeat fixed
 );
 
-$section-title-margin: 7rem;
+$margins: (
+    section-title: 7rem
+);
+
+$animations: (
+    navbar-scrolled: all .2s ease
+);
+
 
 @function color($color-name) {
     @return map-get($colors, $color-name);
@@ -20,6 +27,14 @@ $section-title-margin: 7rem;
 
 @function image($image-name) {
     @return map-get($backgrounds, $image-name);
+}
+
+@function margin($margin-name) {
+    @return map-get($margins, $margin-name);
+}
+
+@function animation($animation-name) {
+    @return map-get($animations, $animation-name);
 }
 
 html {
@@ -71,7 +86,7 @@ body {
 }
 
 .navbar {
-    transition: all 0.5s ease;
+    transition: animation(navbar-scrolled);
     background-color: rgba(28,28,28,0.3) !important;
     padding: 1.5rem 0 1.5rem 0;
 
@@ -92,9 +107,9 @@ body {
     .container {
         .navbar-brand {
             img {
-                width: 77px;
-                height: 71.2px;
-                transition: all 0.5s ease;
+                width: 50px;
+                height: 46px;
+                transition: animation(navbar-scrolled);
             }
         }
 
@@ -170,7 +185,7 @@ body {
 
             .section-title {
                 text-align: center;
-                margin-bottom: $section-title-margin;
+                margin-bottom: margin(section-title);
             }
         }
     }
