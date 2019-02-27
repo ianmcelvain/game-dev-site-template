@@ -200,4 +200,86 @@ body .is-bold {
 .content .social-badge-list .social-badge.badge-mail a:hover {
   color: #57C470;
 }
+
+.project-col {
+  height: 450px;
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+.project-col .project {
+  height: 100%;
+  width: 100%;
+}
+
+.project-col .project a {
+  height: 100%;
+  width: 100%;
+  outline: none;
+  text-decoration: none;
+}
+
+.project-col .project a .project-thumbnail {
+  height: 100%;
+  width: 100%;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+.project-col .project a .project-thumbnail .project-overlay {
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0);
+  overflow: hidden;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+.project-col .project a .project-thumbnail .project-overlay:hover {
+  background: rgba(0, 0, 0, 0.35);
+}
+
+.project-col .project a .project-thumbnail .project-overlay:hover .project-info {
+  color: white;
+}
+
+.project-col .project a .project-thumbnail .project-overlay .project-badge-wrapper {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  -webkit-filter: drop-shadow(5px 5px 10px black);
+          filter: drop-shadow(5px 5px 10px black);
+}
+
+.project-col .project a .project-thumbnail .project-overlay .project-badge-wrapper .project-badge {
+  position: relative;
+  -webkit-clip-path: polygon(0 0, 100% 0, 75% 100%, 0 100%);
+          clip-path: polygon(0 0, 100% 0, 75% 100%, 0 100%);
+  text-shadow: 0 0 2px black;
+  color: white;
+  text-align: left;
+  margin: 0;
+}
+
+.project-col .project a .project-thumbnail .project-overlay .project-badge-wrapper .project-badge.type-game {
+  background-color: #397edd;
+}
+
+.project-col .project a .project-thumbnail .project-overlay .project-badge-wrapper .project-badge.type-software {
+  background-color: #c9510c;
+}
+
+.project-col .project a .project-thumbnail .project-overlay .project-badge-wrapper .project-badge .project-badge-name {
+  margin: 0 2rem 0 .5rem;
+}
+
+.project-col .project a .project-thumbnail .project-overlay .project-info {
+  position: absolute;
+  bottom: 0;
+  color: rgba(0, 0, 0, 0);
+  margin: 0 1rem;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
 /*# sourceMappingURL=main.css.map */
