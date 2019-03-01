@@ -9,7 +9,8 @@ $colors: (
     project-thumbnail: rgba(0,0,0,0),
     project-thumbnail-hovered: rgba(0,0,0,0.35),
     project-badge-game: #397edd,
-    project-badge-software: #c9510c
+    project-badge-software: #c9510c,
+    project-badge-other: #a153d6
 );
 
 $backgrounds: (
@@ -17,6 +18,7 @@ $backgrounds: (
 );
 
 $margins: (
+    small-top: 1rem,
     section-title: 7rem
 );
 
@@ -316,6 +318,10 @@ body {
                             &.type-software {
                                 background-color: color(project-badge-software);
                             }
+
+                            &.type-other {
+                                background-color: color(project-badge-other);
+                            }
         
                             .project-badge-name {
                                 margin: 0 2rem 0 .5rem;
@@ -330,6 +336,47 @@ body {
                         margin: 0 1rem;
                         transition: animation(project-thumbnail);
                     }
+                }
+            }
+        }
+    }
+}
+
+.developer-card {
+    height: 400px;
+    width: 100%;
+    background: rgba(0,0,0,0.35);
+    color: color(text-dark);
+
+    a {
+        height: 100%;
+        width: 100%;
+        outline: none;
+        text-decoration: none;
+
+        .developer-thumbnail {
+            height: 60%;
+            width: 100%;
+            background: url(../img/avatar.png);
+            background-size: cover;
+        }
+    }
+
+    .developer-info {
+        text-align: center;
+        background: white;
+
+        .developer-social {
+            list-style: none;
+            padding: 0;
+
+            li {
+                display: inline-block;
+                font-size: 2rem;
+                margin: 0 .5rem 0 .5rem;
+
+                a {
+                    color: color(text-dark);
                 }
             }
         }

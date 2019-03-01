@@ -270,6 +270,10 @@ body .is-bold {
   background-color: #c9510c;
 }
 
+.project-col .project a .project-thumbnail .project-overlay .project-badge-wrapper .project-badge.type-other {
+  background-color: #a153d6;
+}
+
 .project-col .project a .project-thumbnail .project-overlay .project-badge-wrapper .project-badge .project-badge-name {
   margin: 0 2rem 0 .5rem;
 }
@@ -281,5 +285,46 @@ body .is-bold {
   margin: 0 1rem;
   -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
+}
+
+.developer-card {
+  height: 400px;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.35);
+  color: black;
+}
+
+.developer-card a {
+  height: 100%;
+  width: 100%;
+  outline: none;
+  text-decoration: none;
+}
+
+.developer-card a .developer-thumbnail {
+  height: 60%;
+  width: 100%;
+  background: url(../img/avatar.png);
+  background-size: cover;
+}
+
+.developer-card .developer-info {
+  text-align: center;
+  background: white;
+}
+
+.developer-card .developer-info .developer-social {
+  list-style: none;
+  padding: 0;
+}
+
+.developer-card .developer-info .developer-social li {
+  display: inline-block;
+  font-size: 2rem;
+  margin: 0 .5rem 0 .5rem;
+}
+
+.developer-card .developer-info .developer-social li a {
+  color: black;
 }
 /*# sourceMappingURL=main.css.map */
