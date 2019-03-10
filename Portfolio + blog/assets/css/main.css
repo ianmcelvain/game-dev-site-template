@@ -23,7 +23,7 @@ html a:hover {
 }
 
 body {
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Open Sans', sans-serif;
   color: #d3dbe9;
   background-color: #1c1c1c;
   width: 100%;
@@ -50,11 +50,15 @@ body .is-bold {
   font-weight: 700 !important;
 }
 
+.btn {
+  padding: .8rem 1.5rem;
+}
+
 .btn.btn-outline-primary {
   color: black;
   border-color: black;
   border-radius: 1px;
-  border-width: .2rem;
+  border-width: 2px;
   font-weight: 900;
 }
 
@@ -63,8 +67,35 @@ body .is-bold {
   color: white;
 }
 
+.btn.btn-outline-secondary {
+  color: white;
+  border-color: white;
+  border-radius: 1px;
+  border-width: 2px;
+  font-weight: 900;
+}
+
+.btn.btn-outline-secondary:hover {
+  background-color: white;
+  color: black;
+}
+
 .btn.right {
   float: right;
+  margin: 0 1rem;
+}
+
+form .form-control {
+  padding: .8rem 1.5rem;
+  border-radius: 1px;
+  height: auto;
+}
+
+form label.form-info {
+  font-size: 1.2rem;
+  -ms-flex-item-align: baseline;
+      align-self: baseline;
+  margin: 0 .2rem;
 }
 
 .navbar {
@@ -129,12 +160,44 @@ body .is-bold {
 }
 
 .content .hero.is-fullheight .hero-body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.content .hero.is-fullheight .hero-body .hero-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.content .hero.is-fullheight .hero-body .hero-wrapper .row {
+  width: inherit;
+}
+
+.content .hero.is-fullheight .hero-body .hero-wrapper .row .hero-title {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+}
+
+.content .hero.is-fullheight .hero-body .hero-wrapper .row .hero-title .hero-title-col {
+  position: absolute;
+  width: auto;
+}
+
+.content .hero.is-fullheight .hero-body .hero-wrapper .row .hero-newsletter {
+  width: 100%;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: end;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  text-align: center;
 }
 
 .content .hero.is-large .hero-body {
@@ -182,6 +245,10 @@ body .is-bold {
   font-size: .74rem;
   font-weight: 900;
   letter-spacing: 4px;
+}
+
+.content .form-newsletter {
+  display: inline-block;
 }
 
 .content .social-badge-list {
@@ -450,22 +517,22 @@ body .is-bold {
   position: relative;
   font-size: 1rem;
   font-weight: 700;
-  text-shadow: 0 0 5px black;
+  text-shadow: 0 0 1px black;
   color: white;
   text-align: left;
   margin: 0;
 }
 
-.content-badge-wrapper .content-badge.type-game {
+.content-badge-wrapper .content-badge.type-general {
   background-color: #397edd;
 }
 
-.content-badge-wrapper .content-badge.type-software {
-  background-color: #c9510c;
+.content-badge-wrapper .content-badge.type-devblog {
+  background-color: #a153d6;
 }
 
-.content-badge-wrapper .content-badge.type-other {
-  background-color: #a153d6;
+.content-badge-wrapper .content-badge.type-release {
+  background-color: #c9510c;
 }
 
 .content-badge-wrapper .content-badge .content-badge-name {
