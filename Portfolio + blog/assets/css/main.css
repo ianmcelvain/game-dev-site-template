@@ -51,7 +51,9 @@ body .is-bold {
 }
 
 .btn {
-  padding: .8rem 1.5rem;
+  padding: .8rem 2rem;
+  font-weight: 600;
+  text-transform: uppercase;
 }
 
 .btn.btn-outline-primary {
@@ -59,7 +61,6 @@ body .is-bold {
   border-color: black;
   border-radius: 1px;
   border-width: 2px;
-  font-weight: 900;
 }
 
 .btn.btn-outline-primary:hover {
@@ -72,7 +73,6 @@ body .is-bold {
   border-color: white;
   border-radius: 1px;
   border-width: 2px;
-  font-weight: 900;
 }
 
 .btn.btn-outline-secondary:hover {
@@ -86,7 +86,7 @@ body .is-bold {
 }
 
 form .form-control {
-  padding: .8rem 1.5rem;
+  padding: .8rem 2rem;
   border-radius: 1px;
   height: auto;
 }
@@ -135,6 +135,7 @@ form label.form-info {
   display: -ms-flexbox;
   display: flex;
   width: 100%;
+  position: relative;
 }
 
 .content .hero.header .title {
@@ -200,9 +201,17 @@ form label.form-info {
   text-align: center;
 }
 
+.content .hero.is-large {
+  min-height: 70vh;
+}
+
 .content .hero.is-large .hero-body {
   padding-top: 14rem;
   padding-bottom: 14rem;
+}
+
+.content .hero.is-medium {
+  min-height: 50vh;
 }
 
 .content .hero.is-medium .hero-body {
@@ -210,15 +219,39 @@ form label.form-info {
   padding-bottom: 9rem;
 }
 
-.content .hero.header {
-  background: url(../img/adam4.png) 50% 0 no-repeat fixed;
+.content .hero .hero-bg {
+  position: absolute;
+  overflow: hidden;
+  z-index: 0;
+  pointer-events: none;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-image: url(assets/img/adam5.png);
   background-size: cover;
+  background-position: center center;
+}
+
+.content .hero .hero-bg.bg-fixed {
+  background-attachment: fixed;
+}
+
+.content .hero .hero-bg.bg-blur {
+  -webkit-filter: blur(2px) brightness(100%);
+          filter: blur(2px) brightness(100%);
+}
+
+.content .hero .hero-bg.bg-alpha-fade {
+  -webkit-mask-image: -webkit-linear-gradient(white 20%, transparent 99%);
+          mask-image: -webkit-linear-gradient(white 20%, transparent 99%);
 }
 
 .content .hero .hero-body {
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
+  z-index: 1;
 }
 
 .content .hero .hero-body .section-title {
@@ -228,7 +261,7 @@ form label.form-info {
 
 .content .title {
   color: white;
-  font-weight: 900;
+  font-weight: 600;
 }
 
 .content .title .page-title {
@@ -501,7 +534,38 @@ form label.form-info {
   color: black;
 }
 
-.content-badge-wrapper {
+.post-entry {
+  margin-bottom: 2rem;
+}
+
+.post-entry .post-thumbnail {
+  height: 200px;
+  margin-right: 2rem;
+  background-size: cover;
+  background-position: center;
+}
+
+.post-entry .post-entry-col {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.post-entry .post-entry-col .post-entry-description {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+
+.post-entry .post-entry-col .post-details span {
+  margin-right: 1rem;
+}
+
+.tag-badge-wrapper {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
@@ -513,29 +577,44 @@ form label.form-info {
           box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);
 }
 
-.content-badge-wrapper .content-badge {
+.tags {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   position: relative;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
   font-size: 1rem;
   font-weight: 700;
   text-shadow: 0 0 1px black;
   color: white;
   text-align: left;
-  margin: 0;
+  margin-bottom: 2rem;
 }
 
-.content-badge-wrapper .content-badge.type-general {
+.tags .tag-badge {
+  margin-right: 2rem;
+}
+
+.tags .tag-badge.type-latest {
+  background-color: #cd412b;
+}
+
+.tags .tag-badge.type-general {
   background-color: #397edd;
 }
 
-.content-badge-wrapper .content-badge.type-devblog {
+.tags .tag-badge.type-devblog {
   background-color: #a153d6;
 }
 
-.content-badge-wrapper .content-badge.type-release {
+.tags .tag-badge.type-release {
   background-color: #c9510c;
 }
 
-.content-badge-wrapper .content-badge .content-badge-name {
-  margin: 0 1rem;
+.tags .tag-badge .tag-badge-name {
+  margin: 0;
+  padding: .5rem 1rem;
 }
 /*# sourceMappingURL=main.css.map */
