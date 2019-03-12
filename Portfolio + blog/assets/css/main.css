@@ -591,6 +591,9 @@ form label.form-info {
   color: white;
   text-align: left;
   margin-bottom: 2rem;
+  height: -webkit-min-content;
+  height: -moz-min-content;
+  height: min-content;
 }
 
 .tags .tag-badge {
