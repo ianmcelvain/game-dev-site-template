@@ -25,7 +25,10 @@ $backgrounds: (
 
 $margins: (
     small-top: 1rem,
-    section-title: 7rem
+    section-title: 7rem,
+    small: 1rem,
+    medium: 2rem,
+    large: 4rem
 );
 
 $animations: (
@@ -603,6 +606,7 @@ form {
 
 .post-entry {
     margin-bottom: 2rem;
+    border-right: 1px solid color(text-light);
     
     .post-thumbnail { 
         height: 200px;
@@ -669,7 +673,13 @@ form {
 
         .tag-badge-name {
             margin: 0;
-            padding: .5rem 1rem;
+            padding: .25rem .54rem;
+            font-size: .8rem;
+
+            &.is-medium {
+                padding: .5rem 1rem;
+                font-size: 1rem;
+            }
         }
     }
 }
