@@ -195,9 +195,9 @@ form label.form-info {
   -webkit-box-align: end;
       -ms-flex-align: end;
           align-items: end;
-  display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  display: -webkit-box;
   text-align: center;
 }
 
